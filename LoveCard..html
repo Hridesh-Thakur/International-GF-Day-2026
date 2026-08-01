@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy International Girlfriend's Day</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffdae0, #ffb7c5);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #d63384;
+    }
+
+    .card {
+      position: relative;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #e91e63;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: #c2185b;
+    }
+
+    .cake {
+      font-size: 3rem;
+      margin-top: 10px;
+      animation: bounce 1.5s infinite;
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #880e4f;
+    }
+
+    .heart {
+      position: absolute;
+      top: -10%;
+      color: #ff4081;
+      font-size: 20px;
+      animation: fall linear forwards;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Happy International Girlfriend's Day to you bugguu...</h1>
+    <p>
+      I always love you... ❤️<br>
+      You are my sunshine, my smile, my everything.<br>
+      Thank you for being the most amazing part of my life.<br>
+      I promise to make every day special for you, just like you make mine.
+    </p>
+    <div class="cake">🎂</div>
+    <div class="signature">from your budhauuuu</div>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+      heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+      heart.style.opacity = Math.random();
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
